@@ -1,0 +1,11 @@
+@media (min-width: 330px) {
+  header .title-container {
+    background-color: blue;
+  }
+  header .title-container img {
+    width: 40px;
+  }
+  header .title-container h1 {
+    display: block;
+  }
+}/*# sourceMappingURL=responsive.css.map */

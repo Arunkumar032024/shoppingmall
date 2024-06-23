@@ -1,0 +1,17 @@
+// import variable and mixin
+@import 'variable', 'mixin';
+
+
+@media (min-width: 330px) {
+    header{
+        .title-container{
+            background-color: blue;
+            img{
+                width: 40px;
+            }
+            h1{
+                @include show(block)
+            }
+        }
+    }
+}

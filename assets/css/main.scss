@@ -1,0 +1,83 @@
+// import google font 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap');
+// import variable and mixin
+@import 'variable', 'mixin';
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite NG Modern", cursive;
+}
+
+
+
+
+
+
+
+
+// header section style 
+header{
+    @include flexBox(row, space-between, center);
+    padding: $padding-xs;
+    border-bottom: $light-black 1px solid;
+    i{
+        color: $human;
+        cursor: pointer;
+        &:hover{
+            color: $black;
+        }
+    }
+    div{
+        @include flexBox(row, space-evenly, center);
+    }
+    .title-container{
+        img{
+            width: 40px;
+        }
+        h1{
+            font-size: $font-lg;
+            @include hide;
+        }
+    }
+
+    .social-icons-container{
+        a{
+            margin: 0 $padding-xxs;
+            color: $black;
+        }
+    }
+
+    .cart-icon-container{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        @include flexBox(row, center, center);
+        cursor: pointer;
+        span{
+            font-size: $font-xxs;
+            position: absolute;
+            top: -2px;
+            right: 0px;
+            padding: $padding-xxs;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $human;
+            color: $white;
+            @include flexBox(row, center, center);
+            
+        }
+        &:hover span{
+            background-color: $black;
+        }
+        &:hover i{
+            color: $black;
+        }
+    }
+}
+// End header section style 
