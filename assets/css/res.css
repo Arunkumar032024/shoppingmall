@@ -1,18 +1,13 @@
-@media (min-width: 992px) {
-  footer {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-}
 @media (min-width: 768px) {
   header {
     padding-left: 2rem;
     padding-right: 2rem;
   }
   footer {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
-@media (min-width: 577px) {
+@media (min-width: 576px) {
   footer {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -50,4 +45,4 @@
     font-size: 1.125rem;
     color: rgb(238, 186, 15);
   }
-}/*# sourceMappingURL=responsive.css.map */
+}/*# sourceMappingURL=res.css.map */

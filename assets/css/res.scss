@@ -9,9 +9,7 @@
     
 }
 @media (min-width: 992px) {
-    footer{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
+    
 }
 @media (min-width: 768px) {
     header{
@@ -19,10 +17,10 @@
         padding-right: $padding-xxl;
     }
     footer{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 }
-@media (min-width: 577px) {
+@media (min-width: 576px) {
     footer{
         grid-template-columns: 1fr 1fr 1fr;
     }
