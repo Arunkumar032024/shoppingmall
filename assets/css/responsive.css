@@ -12,7 +12,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
-@media (min-width: 577px) {
+@media (min-width: 576px) {
   footer {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -20,6 +20,9 @@
 @media (min-width: 480px) {
   header .list-icon-container {
     display: none;
+  }
+  nav {
+    display: block;
   }
   nav {
     position: static;

@@ -22,7 +22,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
-@media (min-width: 577px) {
+@media (min-width: 576px) {
     footer{
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -32,6 +32,10 @@
         .list-icon-container{
             @include hide;
         }
+    }
+
+    nav{
+        @include show(block);
     }
 
     nav{
