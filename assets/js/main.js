@@ -4,11 +4,12 @@ import {Footer} from "../_components/Footer.js"
 import {Story} from "../_components/Story.js"
 
 
+window.addEventListener('DOMContentLoaded', () => {
+    
+
+
 const apiUrl = 'https://dummyjson.com/products/search?q=shirt';
 
-
-
-window.addEventListener('DOMContentLoaded', () => {
     // ============================
     // add header section 
     // ============================
@@ -44,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     story.forEach(story=>{
         story.addEventListener("click", ()=>{
             main.innerHTML = '';
+            document.title = 'Shopping Mall - Our Story'
             main.innerHTML = Story;
         })
     })    
