@@ -21,8 +21,38 @@ a{
 .show{
     display: block;
 }
-
-
+h2{
+    font-size: $font-md;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: $margin-sm;
+    font-weight: bolder;
+}
+h3{
+    font-size: $font-sm;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: $margin-xs;
+}
+h3::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background-color: $black;
+}
+p{
+    text-align: center;
+    font-size: $font-xs;
+    padding: $padding-sm;
+}
+.img-adjust{
+    width: 100%;
+}
 
 
 
@@ -31,7 +61,7 @@ a{
 header{
     @include flexBox(row, space-between, center);
     padding: $padding-xs;
-    border-bottom: $light-black 1px solid;
+    
     i{
         color: $human;
         cursor: pointer;
@@ -43,6 +73,7 @@ header{
         @include flexBox(row, space-evenly, center);
     }
     .title-container{
+        cursor: pointer;
         img{
             width: 40px;
         }
@@ -93,6 +124,7 @@ header{
 
 // nav section style
 nav{
+    
     z-index: 10;
     position: fixed;
     background-color: rgba($color: #000000, $alpha: .01);
@@ -102,6 +134,7 @@ nav{
     right: 10px;
     bottom: 10px;
     @include flexBox(row, center, center);
+    display: none;
     ul{
         list-style: none;
         @include flexBox(column, center, center);
@@ -119,6 +152,23 @@ nav{
 }
 // End nav section style
 
+// main section style 
+main{
+    padding: $padding-sm 0;
+    background-color: #cfcdcd13;
+    #story{
+        .first-div{
+            @include flexBox(column-reverse, center, center)
+        }
+        .second-div{
+            @include flexBox(column-reverse, center, center)
+        }
+    }
+
+}
+// End main section style 
+
+
 
 // footer section style 
 footer{
@@ -130,6 +180,7 @@ footer{
     div{
         padding: $padding-xs 0;
         h2{
+            text-transform: capitalize;
             color: $human;
             font-size: $font-md;
             margin-bottom: $margin-sm;
@@ -181,6 +232,7 @@ footer{
         li{
             margin-bottom: $margin-xxs;
             a{
+                font-size: $font-xs;
                 color: $light-black;
                 font-weight: 700;
                 &:hover{

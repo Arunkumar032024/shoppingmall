@@ -1,8 +1,10 @@
 export const Header = `
+<a href="">
 <div class="title-container">
     <img src="./assets/images/logo.png" class="title-img" />
     <h1>ShoppingMall</h1>
 </div>
+</a>
 <div class="social-icons-container">
     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
     <a href="#"><i class="fa-brands fa-instagram"></i></a>
