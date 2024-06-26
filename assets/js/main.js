@@ -20,6 +20,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('nav');
     navbar.innerHTML = Navbar;
     
+    const navIcon = document.querySelector(".fa-bars");
+    navIcon.addEventListener("click", ()=>{
+        navbar.style.display = 'block';
+    })
     
       
     // ============================
@@ -40,9 +44,24 @@ window.addEventListener('DOMContentLoaded', () => {
     const story = document.querySelectorAll('a[href="#story"]');
     story.forEach(story=>{
         story.addEventListener("click", ()=>{
+            navbar.style.display = 'none';
             main.innerHTML = '';
             document.title = 'Shopping Mall - Our Story'
             main.innerHTML = Story;
+        })
+    })    
+    
+    
+    // ============================
+    // add craft section 
+    // ============================
+    const craft = document.querySelectorAll('a[href="#craft"]');
+    craft.forEach(craft=>{
+        craft.addEventListener("click", ()=>{
+            navbar.style.display = 'none';
+            main.innerHTML = '';
+            document.title = 'Shopping Mall - Our Craft'
+            main.innerHTML = Craft;
         })
     })    
 
@@ -50,7 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 const Header = `
-<a href="">
+<a href="index.html">
 <div class="title-container">
     <img src="./assets/images/logo.png" class="title-img" />
     <h1>ShoppingMall</h1>
@@ -75,14 +94,14 @@ const Navbar = `
 <ul>
     <li><a href="#">Shop All</a></li>
     <li><a href="#story">Our Story</a></li>
-    <li><a href="#">Our Craft</a></li>
+    <li><a href="#craft">Our Craft</a></li>
     <li><a href="#">Gift Card</a></li>
     <li><a href="#">Contact Us</a></li>
     <li><a href="#">Login</a></li>
 </ul>
 `
 const Footer = `
-<a href="#">
+<a href="index.html">
     <div>
         <h2>ShoppingMall</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus totam incidunt sit debitis dolorum? Voluptas assumenda possimus nam ipsa reprehenderit. Vero officia maiores adipisci laborum excepturi molestias voluptas libero fugit.</p>
@@ -92,7 +111,7 @@ const Footer = `
 <ul>
     <li><a href="#">Shop All</a></li>
     <li><a href="#story">Our Story</a></li>
-    <li><a href="#">Our Craft</a></li>
+    <li><a href="#craft">Our Craft</a></li>
     <li><a href="#">Gift Card</a></li>
     <li><a href="#">Contact</a></li>
 </ul>
@@ -139,6 +158,44 @@ const Story = `
         </div>
         <div class="right">
             <img src="./assets/images/story-2.webp" alt="our story image" class="img-adjust">
+        </div>
+    </div>
+</section>
+`
+
+
+const Craft =
+`
+<section id="craft">
+    <h2>Our Craft</h2>
+    <div class="first-div div">
+        <div class="left">
+            <h3>DESIGN</h3>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+            <p>Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+        </div>
+        <div class="right">
+            <img src="./assets/images/craft-1.webp" alt="our story image" class="img-adjust">
+        </div>
+    </div>
+    <div class="second-div div">
+        <div class="left">
+            <h3>SELECTION</h3>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+            <p>Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+        </div>
+        <div class="right">
+            <img src="./assets/images/craft-2.webp" alt="our story image" class="img-adjust">
+        </div>
+    </div>
+    <div class="third-div div">
+        <div class="left">
+            <h3>CRAFTSMANSHIP</h3>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+            <p>Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+        </div>
+        <div class="right">
+            <img src="./assets/images/craft-3.webp" alt="our story image" class="img-adjust">
         </div>
     </div>
 </section>

@@ -124,19 +124,19 @@ header .cart-icon-container:hover i {
 }
 
 nav {
-  z-index: 10;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.01);
-  border-radius: 10px;
-  top: 80px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  position: fixed;
+  background-color: #fff;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
   display: none;
+  padding-top: 2rem;
 }
 nav ul {
   list-style: none;
@@ -158,13 +158,17 @@ main {
   padding: 1.125rem 0;
   background-color: rgba(207, 205, 205, 0.0745098039);
 }
-main #story .first-div {
+main #story .first-div,
+main #story .third-div,
+main #craft .first-div,
+main #craft .third-div {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
 }
-main #story .second-div {
+main #story .second-div,
+main #craft .second-div {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -180,6 +184,9 @@ footer {
 }
 footer div {
   padding: 0.813rem 0;
+}
+footer div p {
+  color: rgba(0, 0, 0, 0.5019607843);
 }
 footer div h2 {
   text-transform: capitalize;
