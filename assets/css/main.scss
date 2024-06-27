@@ -159,13 +159,38 @@ main{
     #craft{
         .first-div,
         .third-div{
-            @include flexBox(column-reverse, center, center)
+            @include flexBox(column-reverse, center, center);
         }
         .second-div{
-            @include flexBox(column-reverse, center, center)
+            @include flexBox(column-reverse, center, center);
         }
     }
 
+
+    #faq{
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        .ques-ans{
+            border-bottom: 2px solid $human;
+            margin: $margin-md 0;
+            .ques{
+                @include flexBox(row, space-between, center);
+                p{
+                    font-size: $font-xs;
+                    font-weight: bold;
+                    i{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .ans{
+                p{
+                    text-align: justify;
+                }
+            }
+        }
+    }
 }
 // End main section style 
 

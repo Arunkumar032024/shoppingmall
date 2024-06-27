@@ -44,7 +44,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const story = document.querySelectorAll('a[href="#story"]');
     story.forEach(story=>{
         story.addEventListener("click", ()=>{
-            navbar.style.display = 'none';
+            if(window.innerWidth < 576){
+                navbar.style.display = 'none';
+            }
             main.innerHTML = '';
             document.title = 'Shopping Mall - Our Story'
             main.innerHTML = Story;
@@ -58,12 +60,46 @@ window.addEventListener('DOMContentLoaded', () => {
     const craft = document.querySelectorAll('a[href="#craft"]');
     craft.forEach(craft=>{
         craft.addEventListener("click", ()=>{
-            navbar.style.display = 'none';
+            if(window.innerWidth < 576){
+                navbar.style.display = 'none';
+            }
             main.innerHTML = '';
             document.title = 'Shopping Mall - Our Craft'
             main.innerHTML = Craft;
         })
     })    
+    
+    
+    // ============================
+    // add faq section 
+    // ============================
+    const faq = document.querySelector('a[href="#faq"]');
+    faq.addEventListener("click", ()=>{
+        if(window.innerWidth < 576){
+            navbar.style.display = 'none';
+        }
+        main.innerHTML = '';
+        document.title = 'Shopping Mall - Our Craft'
+        main.innerHTML = Faq;
+
+        const faqBtn1 = document.querySelector("#faq-i-1");
+        const faqBtn2 = document.querySelector("#faq-i-2");
+        const faqBtn3 = document.querySelector("#faq-i-3");
+        faqBtn1.addEventListener("click", ()=>{
+            document.querySelector("#faq-ans-1").classList.toggle("hide")
+            faqBtn1.classList.toggle("fa-angle-up");
+        })
+        faqBtn2.addEventListener("click", ()=>{
+            document.querySelector("#faq-ans-2").classList.toggle("hide")
+            faqBtn2.classList.toggle("fa-angle-up");
+        })
+        faqBtn3.addEventListener("click", ()=>{
+            document.querySelector("#faq-ans-3").classList.toggle("hide")
+            faqBtn3.classList.toggle("fa-angle-up");
+        })
+    })
+
+    
 
 })
 
@@ -116,7 +152,7 @@ const Footer = `
     <li><a href="#">Contact</a></li>
 </ul>
 <ul>
-    <li><a href="#">FAQ</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#">Shipping & Returns</a></li>
     <li><a href="#">Store Policy</a></li>
     <li><a href="#">Payment Methods</a></li>
@@ -196,6 +232,41 @@ const Craft =
         </div>
         <div class="right">
             <img src="./assets/images/craft-3.webp" alt="our story image" class="img-adjust">
+        </div>
+    </div>
+</section>
+`
+
+const Faq = 
+`
+<section id="faq">
+    <h2>F A Q</h2>
+    <h3>Frequently Asked Questions</h3>
+    <div class="ques-ans">
+        <div class="ques">
+            <p>How do I track my order?</p>
+            <p><i id="faq-i-1" class="fa-solid fa-angle-down"></i></p>
+        </div>
+        <div class="ans hide" id="faq-ans-1">
+            <p>Once your order is shipped, you will receive a confirmation email with a tracking number and a link to track your package. You can also log in to your account on our website, go to the "My Orders" section, and click on the tracking link next to your order for the latest updates.</p>
+        </div>
+    </div>
+    <div class="ques-ans">
+        <div class="ques">
+            <p>What is your return policy?</p>
+            <p><i id="faq-i-2" class="fa-solid fa-angle-down"></i></p>
+        </div>
+        <div class="ans hide" id="faq-ans-2">
+            <p>We accept returns within 30 days of the delivery date. Items must be in their original condition, unworn, and with all tags attached. To initiate a return, visit our Returns page, fill out the return form, and follow the instructions provided. Once we receive and inspect the returned items, we will process your refund within 5-7 business days.</p>
+        </div>
+    </div>
+    <div class="ques-ans">
+        <div class="ques">
+            <p>How can I contact customer support?</p>
+            <p><i id="faq-i-3" class="fa-solid fa-angle-down"></i></p>
+        </div>
+        <div class="ans hide" id="faq-ans-3">
+            <p>Our customer support team is available to assist you 24/7. You can reach us via email at <a href="mailto:arunkumar032024@gmail.com">support@gmail.com</a>, through our live chat feature on the website, or by calling our toll-free number at 1-800-123-4567. We strive to respond to all inquiries within 24 hours.</p>
         </div>
     </div>
 </section>
