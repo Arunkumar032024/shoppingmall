@@ -27,11 +27,12 @@ h2 {
 }
 
 h3 {
-  font-size: 1.125rem;
+  font-size: 0.813rem;
   font-weight: bold;
   text-align: center;
   position: relative;
   margin-bottom: 0.813rem;
+  margin-top: 1.413rem;
 }
 
 h3::after {

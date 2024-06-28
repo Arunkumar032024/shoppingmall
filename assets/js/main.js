@@ -99,7 +99,36 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-    
+
+    // ============================
+    // add shipping section 
+    // ============================
+    const shipping = document.querySelector('a[href="#shipping"]');
+    shipping.addEventListener("click", ()=>{
+        if(window.innerWidth < 576){
+            navbar.style.display = 'none';
+        }
+        main.innerHTML = '';
+        document.title = 'Shopping Mall - Shipping & Returns'
+        main.innerHTML = Shipping;
+
+    })
+
+
+    // ============================
+    // add sppm section 
+    // ============================
+    const sppm = document.querySelectorAll('a[href="#sppm"]');
+    sppm.forEach(sppm=>{
+        sppm.addEventListener("click", ()=>{
+            if(window.innerWidth < 576){
+                navbar.style.display = 'none';
+            }
+            main.innerHTML = '';
+            document.title = 'Shopping Mall - Store Policy & Payment Method'
+            main.innerHTML = Sppm;
+        })
+    })    
 
 })
 
@@ -153,16 +182,16 @@ const Footer = `
 </ul>
 <ul>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#">Shipping & Returns</a></li>
-    <li><a href="#">Store Policy</a></li>
-    <li><a href="#">Payment Methods</a></li>
+    <li><a href="#shipping">Shipping & Returns</a></li>
+    <li><a href="#sppm">Store Policy</a></li>
+    <li><a href="#sppm">Payment Methods</a></li>
     <li><a href="#">Stockists</a></li>
 </ul>
 <ul>
-    <li><a href="#">Facebook</a></li>
-    <li><a href="#">Instagram</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Pinterest</a></li>
+    <li><a href="https://bit.ly/4cl6CSH" target="_blank">Facebook</a></li>
+    <li><a href="https://bit.ly/3VHE0Mc" target="_blank">Instagram</a></li>
+    <li><a href="https://bit.ly/3L3kYLn" target="_blank">Twitter</a></li>
+    <li><a href="https://bit.ly/3L8ncsI" target="_blank">Pinterest</a></li>
 </ul>
 <div>
     <h3>Join Us</h3>
@@ -268,6 +297,51 @@ const Faq =
         <div class="ans hide" id="faq-ans-3">
             <p>Our customer support team is available to assist you 24/7. You can reach us via email at <a href="mailto:arunkumar032024@gmail.com">support@gmail.com</a>, through our live chat feature on the website, or by calling our toll-free number at 1-800-123-4567. We strive to respond to all inquiries within 24 hours.</p>
         </div>
+    </div>
+</section>
+`
+
+const Shipping = 
+`
+<section id="shipping">
+    <h2>SHIPPING & RETURNS</h2>
+    <div>
+        <h3>SHIPPING POLICY</h3>
+        <p>I’m a shipping policy section. I’m a great place to update your customers about your shipping methods, packaging and costs. Use plain, straightforward language to build trust and make sure that your customers stay loyal!</p>
+        <p>I'm the second paragraph in your shipping policy section. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add details about your policy and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+    </div>
+    <div>
+        <h3>RETURN & EXCHANGE POLICY</h3>
+        <p>I’m a return policy section. I’m a great place to let your customers know what to do in case they’ve changed their mind about their purchase, or if they’re dissatisfied with a product. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.</p>
+        <p>I'm the second paragraph in your return & exchange policy. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add details about your policy and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+    </div>                
+        
+</section>
+`
+
+
+const Sppm = 
+`
+<section id="sppm">
+    <h2>STORE POLICY</h2>
+    <div>
+        <h3>CUSTOMER CARE</h3>
+        <p>I’m a customer care section. I’m a great place to update your customers about your shipping methods, packaging and costs. Use plain, straightforward language to build trust and make sure that your customers stay loyal!</p>
+        <p>I'm the second paragraph in your customer care section. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add details about your policy and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+    </div>
+    <div>
+        <h3>PRIVACY & SAFETY</h3>
+        <p>I’m a privacy & safety policy section. I’m a great place to let your customers know what to do in case they’ve changed their mind about their purchase, or if they’re dissatisfied with a product. Having a straightforward refund or exchange policy is a great way to build trust and reassure your customers that they can buy with confidence.</p>
+        <p>I'm the second paragraph in your privacy & safety policy. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add details about your policy and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+    </div>                
+    <div>
+        <h3>WHOLESALE INQUIRIES</h3>
+        <p>I’m a wholesale inquiries section. I’m a great place to update your customers about your shipping methods, packaging and costs. Use plain, straightforward language to build trust and make sure that your customers stay loyal!</p>
+        <p>I'm the second paragraph in your your wholesale inquiries section. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add details about your policy and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+    </div>
+    <div>
+        <h3>PAYMENT METHODS</h3>
+        <p>Credit / Debit Cards<br />PAYPAL<br />Offline Payments</br>
     </div>
 </section>
 `

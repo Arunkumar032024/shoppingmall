@@ -29,11 +29,12 @@ h2{
     font-weight: bolder;
 }
 h3{
-    font-size: $font-sm;
+    font-size: $font-xs;
     font-weight: bold;
     text-align: center;
     position: relative;
     margin-bottom: $margin-xs;
+    margin-top: $margin-md;
 }
 h3::after{
     content: '';
@@ -191,6 +192,8 @@ main{
             }
         }
     }
+
+    
 }
 // End main section style 
 

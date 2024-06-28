@@ -81,6 +81,13 @@
         padding-left: $padding-xxl;
         padding-right: $padding-xxl;
     }
+    main{
+        #shipping,
+        #sppm{
+            max-width: 768px;
+            margin: 0 auto;
+        }
+    }
     footer{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
